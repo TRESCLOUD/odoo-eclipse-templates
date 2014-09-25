@@ -1,4 +1,9 @@
-openerp-eclipse-templates
-=========================
+odoo-eclipse-templates
+======================
 
-Templates para OpenERP con Eclipse
+TRESCLOUD templates for OpenERP/Odoo
+
+Based on the great work at 
+https://code.google.com/p/openerp-eclipse-template/
+
+Enjoy
