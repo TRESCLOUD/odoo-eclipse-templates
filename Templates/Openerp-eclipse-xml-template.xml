@@ -4,6 +4,32 @@
 			res_model="${res_model}"
 			src_model="${src_model}"
 			id="act_${unique_id}"/&gt;
+	</template><template autoinsert="true" context="xml_all" deleted="false" description="domain in field" enabled="true" name="domain">        
+            domain="[('${field}', '${condition}', active_id)]"</template><template autoinsert="true" context="xml_all" deleted="false" description="context in field" enabled="true" name="context">        
+            context="{'default_${field}':'${value}'}"</template><template autoinsert="true" context="xml_all" deleted="false" description="attrs and readonly in the field" enabled="true" name="attrs readonly">        
+            attrs="{'readonly':[('${field}','${condition}','${value}')]}"</template><template autoinsert="true" context="xml_all" deleted="false" description="attrs and invisible in the field" enabled="true" name="attrs invisible">        
+            attrs="{'invisible':[('${field}','${condition}','${value}')]}"</template><template autoinsert="true" context="xml_all" deleted="false" description="attrs and required in the field" enabled="true" name="attrs required">        
+            attrs="{'required':[('${field}','${condition}','${value}')]}"</template><template autoinsert="true" context="xml_all" deleted="false" description="required and required in the attrs" enabled="true" name="required">        
+            ,'required':[('${field}','${condition}','${value}')]</template><template autoinsert="true" context="xml_all" deleted="false" description="invisible and required in the attrs" enabled="true" name="invisible">        
+            ,'invisible':[('${field}','${condition}','${value}')]</template><template autoinsert="true" context="xml_all" deleted="false" description="readonly and required in the attrs" enabled="true" name="readonly">        
+            ,'readonly':[('${field}','${condition}','${value}')]</template><template autoinsert="true" context="xml_all" deleted="false" description="xpath after" enabled="true" name="xpath after">        
+    		&lt;xpath expr="//${field}[@${name}='${value}']" position="${after}"&gt;
+            	&lt;field name="${field}" string="${field}" help="In this field ${field}, "/&gt;
+            &lt;/xpath&gt;
+	</template><template autoinsert="true" context="xml_all" deleted="false" description="xpath before" enabled="true" name="xpath before">
+    		&lt;xpath expr="//${field}[@${name}='${value}']" position="${before}"&gt;
+            	&lt;field name="${field}" string="${field}" help="In this field ${field}, "/&gt;
+            &lt;/xpath&gt;
+	</template><template autoinsert="true" context="xml_all" deleted="false" description="xpath replace" enabled="true" name="xpath replace">        
+    		&lt;xpath expr="//${field}[@${name}='${value}']" position="${replace}"&gt;
+            	&lt;field name="${field}" string="${field}" help="In this field ${field}, "/&gt;
+            &lt;/xpath&gt;
+	</template><template autoinsert="true" context="xml_all" deleted="false" description="xpath attributes" enabled="true" name="xpath attributes">        
+    		&lt;xpath expr="//${field}[@${name}='${value}']" position="attributes"&gt;
+            	&lt;attribute name='${tipo_de_atributo}'&gt;${expresion}&lt;/attribute&gt;
+            &lt;/xpath&gt;
+	</template><template autoinsert="true" context="xml_all" deleted="false" description="attribute" enabled="true" name="attribute">
+    			&lt;attribute name='${tipo_de_atributo}'&gt;${expresion}&lt;/attribute&gt;
 	</template><template autoinsert="true" context="xml_all" deleted="false" description="button_object" enabled="true" name="button_object">&lt;button name="${function_name}" states="${state}" string="${string}" type="object" icon="${icon}"/&gt;</template><template autoinsert="true" context="xml_all" deleted="false" description="button_wizard" enabled="true" name="button_wizard">&lt;button name='%(${wizard_id})d' type='action' string='${string}' states='${state}' icon="${icon}"/&gt;</template><template autoinsert="true" context="xml_all" deleted="false" description="calendar_view" enabled="true" name="calendar_view">&lt;record model="ir.ui.view" id="${object_name}_calendar_view"&gt;
     &lt;field name="name"&gt;${objectname} Calendar&lt;/field&gt;
     &lt;field name="model"&gt;${objectname}&lt;/field&gt;
