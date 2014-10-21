@@ -4,7 +4,7 @@
 			res_model="${res_model}"
 			src_model="${src_model}"
 			id="act_${unique_id}"/&gt;
-	</template><template autoinsert="true" context="xml_all" deleted="false" description="domain in field" enabled="true" name="domain">        
+	</template><template autoinsert="true" context="xml_all" deleted="false" description="domain in field" enabled="true" name="domain">
             domain="[('${field}', '${condition}', active_id)]"</template><template autoinsert="true" context="xml_all" deleted="false" description="context in field" enabled="true" name="context">        
             context="{'default_${field}':'${value}'}"</template><template autoinsert="true" context="xml_all" deleted="false" description="attrs and readonly in the field" enabled="true" name="attrs readonly">        
             attrs="{'readonly':[('${field}','${condition}','${value}')]}"</template><template autoinsert="true" context="xml_all" deleted="false" description="attrs and invisible in the field" enabled="true" name="attrs invisible">        
